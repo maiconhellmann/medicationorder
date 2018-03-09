@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pharmacy.maicon.com.pharmacyapp.MainActivity">
+
+    <!--Medication name-->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutMedicationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextMedicationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/order_medication_name"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <!--Medication Type-->
+    <Spinner
+        android:id="@+id/spinnerMedicationType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutMedicationName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/default_margin"/>
+
+    <!--Amount-->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerMedicationType"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextAmout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/order_meditacion_amount"
+            android:inputType="number"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <!--Distributor-->
+    <TextView
+        android:id="@+id/textViewDistributor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/order_meditacion_distributor"
+        android:layout_margin="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/layoutAmount"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupDistributor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/textViewDistributor"
+        android:layout_margin="@dimen/default_margin"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButtonCofarma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_meditacion_distributor_cofarma"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonEmpsephar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_meditacion_distributor_empsephar"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonCemefar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_meditacion_distributor_cemefar"/>
+    </RadioGroup>
+
+    <!--Branch-->
+    <TextView
+        android:id="@+id/textViewBranch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:textStyle="bold"
+        android:text="@string/order_meditacion_branch"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupDistributor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/checkboxBranchPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewBranch"
+        android:text="@string/order_meditacion_branch_primary"
+        android:layout_margin="@dimen/default_margin"/>
+    <CheckBox
+        android:id="@+id/checkboxBranchSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/checkboxBranchPrimary"
+        app:layout_constraintTop_toBottomOf="@id/textViewBranch"
+        android:text="@string/order_meditacion_branch_secondary"
+        android:layout_margin="@dimen/default_margin"/>
+
+    <!--Ok button-->
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/default_margin"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+
+    <!--Delete-->
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/buttonOk"
+        android:layout_margin="@dimen/default_margin"
+        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"/>
+</android.support.constraint.ConstraintLayout>

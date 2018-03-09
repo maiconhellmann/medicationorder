@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PharmacyApp</string>
+    
+    <!--Form new order-->
+    <string name="order_medication_name">Medication name</string>
+    <string name="order_meditacion_type">Type</string>
+    <string name="order_meditacion_amount">Amount</string>
+    <string name="order_meditacion_distributor">Distributor</string>
+    <string name="order_meditacion_distributor_cofarma">Cofarma</string>
+    <string name="order_meditacion_distributor_empsephar">Empsephar</string>
+    <string name="order_meditacion_distributor_cemefar">Cemefar</string>
+    <string name="order_meditacion_branch">Branch</string>
+    <string name="order_meditacion_branch_primary">Primary</string>
+    <string name="order_meditacion_branch_secondary">Secondary</string>
+    <string name="order_medication_type_select_one">Select the medication type</string>
+
+    <string name="ok">OK</string>
+    <string name="delete">Delete</string>
+    <string name="error">Error</string>
+    <string name="mandatory_fileds_error">All fields are mandatory.</string>
+    <string name="order_confirm">New Order</string>
+</resources>
